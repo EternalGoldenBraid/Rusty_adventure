@@ -43,7 +43,7 @@ fn main() -> ! {
 
         // other well known baud rates are possible (9600)
         //57600,
-        9600.into_baudrate(),
+        57600.into_baudrate(),
         );
 
     // Read from moisture sensor.
@@ -53,19 +53,25 @@ fn main() -> ! {
         a0in: pins.a0.into_floating_input(&mut pins.ddr),
     };
 
+
     loop {
-        //let value = sensor_unit.a0in.read().bits();
-        if sensor_unit.a0in.is_high().void_unwrap() {
-            ufmt::uwriteln!( 
-                &mut serial,
-                "1.\r"
-            ).void_unwrap();
-        } else {
-            ufmt::uwriteln!( 
-                &mut serial,
-                "0.\r"
-            ).void_unwrap();
-        }
+        ufmt::uwriteln!( serial, "asd" ).void_unwrap();
+
     }
+
+    //loop {
+    //    //let value = sensor_unit.a0in.read().bits();
+    //    if sensor_unit.a0in.is_high().void_unwrap() {
+    //        ufmt::uwriteln!( 
+    //            &mut serial,
+    //            "1.\r"
+    //        ).void_unwrap();
+    //    } else {
+    //        ufmt::uwriteln!( 
+    //            &mut serial,
+    //            "0.\r"
+    //        ).void_unwrap();
+    //    }
+    //}
 
 }
