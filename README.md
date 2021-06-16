@@ -1,5 +1,9 @@
 # Rusty_adventure
 
+## Instructions
+
+To build 'cargo build'. This should create an elf file `<name>.elf` in `target/avr-atmega328p/debug/
+
 ## Resources
 
 <ul>
